@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nisma Fatima - AI Engineer & Data Scientist</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --primary: #00ffff;
@@ -32,16 +28,12 @@
 
         .animated-bg {
             position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
+            width: 100%; height: 100%;
+            top: 0; left: 0; z-index: 0;
             background: radial-gradient(ellipse at top, #14141f 0%, #0a0a0f 100%);
         }
 
-        .animated-bg::before,
-        .animated-bg::after {
+        .animated-bg::before, .animated-bg::after {
             content: '';
             position: absolute;
             border-radius: 50%;
@@ -51,47 +43,36 @@
         }
 
         .animated-bg::before {
-            width: 600px;
-            height: 600px;
+            width: 600px; height: 600px;
             background: var(--primary);
-            top: -200px;
-            right: -200px;
+            top: -200px; right: -200px;
         }
 
         .animated-bg::after {
-            width: 500px;
-            height: 500px;
+            width: 500px; height: 500px;
             background: var(--accent);
-            bottom: -150px;
-            left: -150px;
+            bottom: -150px; left: -150px;
             animation-delay: 3s;
         }
 
         @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(100px, -100px) rotate(120deg); }
-            66% { transform: translate(-100px, 100px) rotate(240deg); }
+            0%, 100% { transform: translate(0,0) rotate(0deg); }
+            33% { transform: translate(100px,-100px) rotate(120deg); }
+            66% { transform: translate(-100px,100px) rotate(240deg); }
         }
 
         .hero {
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
-            padding: 2rem;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; z-index: 1; padding: 2rem;
         }
 
-        .hero-content {
-            text-align: center;
-            max-width: 1000px;
-        }
+        .hero-content { text-align: center; max-width: 1000px; }
 
         .badge {
             display: inline-block;
             padding: 0.6rem 1.8rem;
-            background: rgba(0, 255, 255, 0.1);
+            background: rgba(0,255,255,0.1);
             border: 2px solid var(--primary);
             border-radius: 50px;
             color: var(--primary);
@@ -104,104 +85,79 @@
         }
 
         @keyframes glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(0, 255, 255, 0.6); }
+            0%, 100% { box-shadow: 0 0 20px rgba(0,255,255,0.3); }
+            50% { box-shadow: 0 0 40px rgba(0,255,255,0.6); }
         }
 
         .hero h1 {
-            font-size: 5.5rem;
-            font-weight: 900;
+            font-size: 5.5rem; font-weight: 900;
             background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1.5rem;
-            letter-spacing: -3px;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem; letter-spacing: -3px;
             animation: fadeInUp 1s ease;
         }
 
         .hero .role {
-            font-size: 2rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            font-weight: 800;
+            font-size: 2rem; color: var(--text-light);
+            margin-bottom: 2rem; font-weight: 800;
             animation: fadeInUp 1s ease 0.2s both;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            color: #94a3b8;
+            font-size: 1.2rem; color: #94a3b8;
             margin-bottom: 2rem;
             animation: fadeIn 1.5s ease-in;
         }
-        
+
         .stats-container {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin: 3rem 0;
-            flex-wrap: wrap;
+            display: flex; justify-content: center;
+            gap: 3rem; margin: 3rem 0; flex-wrap: wrap;
             animation: fadeInUp 1s ease 0.4s both;
         }
 
         .stat-box {
-            text-align: center;
-            padding: 1.5rem 2rem;
-            background: rgba(0, 255, 255, 0.05);
+            text-align: center; padding: 1.5rem 2rem;
+            background: rgba(0,255,255,0.05);
             border: 2px solid var(--border);
-            border-radius: 15px;
-            transition: all 0.3s;
+            border-radius: 15px; transition: all 0.3s;
         }
 
         .stat-box:hover {
             transform: translateY(-5px);
             border-color: var(--primary);
-            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2);
+            box-shadow: 0 10px 40px rgba(0,255,255,0.2);
         }
 
         .stat-number {
-            font-size: 3rem;
-            font-weight: 900;
+            font-size: 3rem; font-weight: 900;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             display: block;
         }
 
         .stat-label {
-            color: var(--text-gray);
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
+            color: var(--text-gray); font-weight: 600;
+            text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;
         }
 
         .contact-grid {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
+            display: flex; gap: 2rem; justify-content: center;
+            flex-wrap: wrap; margin-bottom: 3rem;
             animation: fadeInUp 1s ease 0.6s both;
         }
 
         .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            color: var(--text-light);
-            text-decoration: none;
+            display: flex; align-items: center; gap: 0.7rem;
+            color: var(--text-light); text-decoration: none;
             padding: 1rem 1.8rem;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            transition: all 0.3s;
-            font-weight: 600;
+            border-radius: 12px; transition: all 0.3s; font-weight: 600;
         }
 
         .contact-item:hover {
-            background: rgba(0, 255, 255, 0.1);
-            border-color: var(--primary);
-            transform: translateY(-3px);
+            background: rgba(0,255,255,0.1);
+            border-color: var(--primary); transform: translateY(-3px);
         }
 
         @keyframes fadeInUp {
@@ -209,294 +165,217 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        @keyframes fadeIn {
+            from { opacity: 0; } to { opacity: 1; }
+        }
+
         .section {
             padding: 6rem 2rem;
             max-width: 1400px;
             margin: 0 auto;
-            position: relative;
-            z-index: 1;
+            position: relative; z-index: 1;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
+        .section-header { text-align: center; margin-bottom: 5rem; }
 
         .section-tag {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background: rgba(157, 78, 237, 0.1);
+            display: inline-block; padding: 0.5rem 1.5rem;
+            background: rgba(157,78,237,0.1);
             border: 2px solid var(--secondary);
-            border-radius: 50px;
-            color: var(--secondary);
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
+            border-radius: 50px; color: var(--secondary);
+            font-weight: 700; margin-bottom: 1.5rem;
+            text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px;
         }
 
         .section-title {
-            font-size: 4rem;
-            font-weight: 900;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            letter-spacing: -2px;
+            font-size: 4rem; font-weight: 900;
+            color: var(--text-light); margin-bottom: 1rem; letter-spacing: -2px;
         }
 
         .section-subtitle {
-            font-size: 1.3rem;
-            color: var(--text-gray);
-            max-width: 800px;
-            margin: 0 auto;
+            font-size: 1.3rem; color: var(--text-gray);
+            max-width: 800px; margin: 0 auto;
         }
 
+        /* ── Summary ── */
         .summary-container {
             background: var(--bg-card);
             border: 2px solid var(--border);
-            border-radius: 25px;
-            padding: 3.5rem;
-            margin-bottom: 5rem;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
-            position: relative;
-            overflow: hidden;
+            border-radius: 25px; padding: 3.5rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+            position: relative; overflow: hidden;
         }
 
         .summary-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
+            content: ''; position: absolute;
+            top: 0; left: 0; right: 0; height: 5px;
             background: linear-gradient(90deg, var(--primary), var(--accent));
         }
 
         .summary-title {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 2rem; color: var(--primary);
+            margin-bottom: 1.5rem; font-weight: 900;
+            text-transform: uppercase; letter-spacing: 1px;
         }
 
         .summary-text {
-            font-size: 1.2rem;
-            line-height: 2;
-            color: var(--text-light);
-            font-weight: 500;
+            font-size: 1.2rem; line-height: 2;
+            color: var(--text-light); font-weight: 500;
         }
 
         .summary-highlight {
-            color: var(--bg-dark);
-            background: var(--text-light);
-            padding: 0.2rem 0.5rem;
-            border-radius: 5px;
-            font-weight: 800;
+            color: var(--bg-dark); background: var(--text-light);
+            padding: 0.2rem 0.5rem; border-radius: 5px; font-weight: 800;
+        }
+
+        /* ── Skills heading ── */
+        .skills-section-heading {
+            font-size: 2.4rem; font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 2.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2.5rem;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
 
         .skill-box {
             background: var(--bg-card);
             border: 2px solid var(--border);
-            border-radius: 20px;
-            padding: 2.5rem;
-            transition: all 0.4s;
-            position: relative;
-            overflow: hidden;
+            border-radius: 20px; padding: 2.5rem;
+            transition: all 0.4s; position: relative; overflow: hidden;
         }
 
         .skill-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
+            content: ''; position: absolute;
+            top: 0; left: 0; width: 100%; height: 5px;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
-            transform: scaleX(0);
-            transition: transform 0.4s;
+            transform: scaleX(0); transition: transform 0.4s;
         }
 
-        .skill-box:hover::before {
-            transform: scaleX(1);
-        }
+        .skill-box:hover::before { transform: scaleX(1); }
 
         .skill-box:hover {
             transform: translateY(-10px);
             border-color: var(--primary);
-            box-shadow: 0 25px 60px rgba(0, 255, 255, 0.2);
+            box-shadow: 0 25px 60px rgba(0,255,255,0.2);
         }
 
         .skill-title {
-            font-size: 1.6rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-weight: 900;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+            font-size: 1.4rem; color: var(--primary);
+            margin-bottom: 1.5rem; font-weight: 900;
+            display: flex; align-items: center; gap: 0.8rem;
         }
 
-        .skill-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.9rem;
-        }
+        .skill-items { display: flex; flex-wrap: wrap; gap: 0.9rem; }
 
         .skill-tag {
-            background: rgba(0, 255, 255, 0.1);
-            padding: 0.7rem 1.3rem;
-            border-radius: 30px;
-            font-size: 0.95rem;
-            color: var(--text-light);
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            transition: all 0.3s;
-            font-weight: 600;
+            background: rgba(0,255,255,0.1);
+            padding: 0.6rem 1.2rem; border-radius: 30px;
+            font-size: 0.9rem; color: var(--text-light);
+            border: 1px solid rgba(0,255,255,0.3);
+            transition: all 0.3s; font-weight: 600;
         }
 
         .skill-tag:hover {
-            background: rgba(0, 255, 255, 0.2);
-            border-color: var(--primary);
-            transform: scale(1.05);
+            background: rgba(0,255,255,0.2);
+            border-color: var(--primary); transform: scale(1.05);
         }
 
-        .category-wrapper {
-            margin-bottom: 6rem;
-        }
+        /* ── Projects ── */
+        .category-wrapper { margin-bottom: 6rem; }
 
         .category-header {
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--primary);
-            margin-bottom: 3rem;
+            font-size: 2.6rem; font-weight: 900;
+            color: var(--primary); margin-bottom: 3rem;
             padding-bottom: 1rem;
             border-bottom: 4px solid var(--primary);
-            display: inline-block;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            display: inline-block; text-transform: uppercase; letter-spacing: 1px;
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
             gap: 3rem;
         }
 
         .project-card {
             background: var(--bg-card);
             border: 2px solid var(--border);
-            border-radius: 25px;
-            overflow: hidden;
-            transition: all 0.4s;
-            position: relative;
+            border-radius: 25px; overflow: hidden;
+            transition: all 0.4s; position: relative;
         }
 
         .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
+            content: ''; position: absolute;
+            top: 0; left: 0; right: 0; height: 6px;
             background: linear-gradient(90deg, var(--primary), var(--accent));
-            transform: scaleX(0);
-            transition: transform 0.4s;
+            transform: scaleX(0); transition: transform 0.4s;
         }
 
-        .project-card:hover::before {
-            transform: scaleX(1);
-        }
+        .project-card:hover::before { transform: scaleX(1); }
 
         .project-card:hover {
             transform: translateY(-15px);
             border-color: var(--primary);
-            box-shadow: 0 30px 70px rgba(0, 255, 255, 0.3);
+            box-shadow: 0 30px 70px rgba(0,255,255,0.3);
         }
 
         .project-header {
             padding: 2.5rem;
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.05), rgba(157, 78, 237, 0.05));
+            background: linear-gradient(135deg, rgba(0,255,255,0.05), rgba(157,78,237,0.05));
         }
 
         .project-label {
-            display: inline-block;
-            padding: 0.5rem 1.3rem;
-            background: rgba(255, 0, 110, 0.15);
-            color: var(--accent);
-            border-radius: 25px;
-            font-size: 0.85rem;
-            font-weight: 800;
-            margin-bottom: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            display: inline-block; padding: 0.5rem 1.3rem;
+            background: rgba(255,0,110,0.15); color: var(--accent);
+            border-radius: 25px; font-size: 0.85rem; font-weight: 800;
+            margin-bottom: 1.2rem; text-transform: uppercase; letter-spacing: 1px;
         }
 
         .project-name {
-            font-size: 1.7rem;
-            color: var(--text-light);
-            font-weight: 900;
-            line-height: 1.4;
+            font-size: 1.6rem; color: var(--text-light);
+            font-weight: 900; line-height: 1.4;
         }
 
-        .project-body {
-            padding: 2rem 2.5rem 2.5rem;
-        }
+        .project-body { padding: 2rem 2.5rem 2.5rem; }
 
         .project-desc {
-            color: var(--text-gray);
-            margin-bottom: 2rem;
-            line-height: 1.9;
-            font-size: 1.05rem;
-        }
-
-        .project-footer {
-            display: flex;
-            gap: 1.5rem;
+            color: var(--text-gray); margin-bottom: 2rem;
+            line-height: 1.9; font-size: 1.05rem;
         }
 
         .github-btn {
-            flex: 1;
-            padding: 1.2rem;
-            text-align: center;
-            border-radius: 15px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1rem;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.7rem;
+            display: flex; align-items: center; justify-content: center; gap: 0.7rem;
+            padding: 1.2rem; text-align: center;
+            border-radius: 15px; text-decoration: none;
+            font-weight: 800; font-size: 1rem; transition: all 0.3s;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: var(--bg-dark);
-            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0,255,255,0.3);
         }
 
         .github-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.5);
+            box-shadow: 0 15px 40px rgba(0,255,255,0.5);
         }
 
-        .education-grid {
-            display: grid;
-            gap: 3rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+        /* ── Education ── */
+        .education-grid { display: grid; gap: 3rem; max-width: 1000px; margin: 0 auto; }
 
         .education-card {
             background: var(--bg-card);
             border: 2px solid var(--border);
-            border-radius: 25px;
-            padding: 3rem;
+            border-radius: 25px; padding: 3rem;
             border-left: 6px solid var(--primary);
             transition: all 0.4s;
         }
@@ -504,71 +383,50 @@
         .education-card:hover {
             transform: translateX(20px);
             border-left-color: var(--accent);
-            box-shadow: 0 25px 60px rgba(0, 255, 255, 0.2);
+            box-shadow: 0 25px 60px rgba(0,255,255,0.2);
         }
 
         .edu-year {
-            display: inline-block;
-            padding: 0.7rem 1.8rem;
+            display: inline-block; padding: 0.7rem 1.8rem;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--bg-dark);
-            border-radius: 30px;
-            font-weight: 900;
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
+            color: var(--bg-dark); border-radius: 30px;
+            font-weight: 900; font-size: 1.2rem; margin-bottom: 1.5rem;
         }
 
         .edu-title {
-            font-size: 1.8rem;
-            color: var(--text-light);
-            font-weight: 900;
-            margin-bottom: 1rem;
+            font-size: 1.8rem; color: var(--text-light);
+            font-weight: 900; margin-bottom: 1rem;
         }
 
-        .edu-inst {
-            color: var(--text-gray);
-            font-size: 1.15rem;
-            font-weight: 600;
-        }
+        .edu-inst { color: var(--text-gray); font-size: 1.15rem; font-weight: 600; }
 
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.8rem;
-            margin-top: 2rem;
+            gap: 1.8rem; margin-top: 2rem;
         }
 
         .cert-box {
-            background: rgba(0, 255, 255, 0.05);
-            padding: 1.5rem;
-            border-radius: 15px;
-            border: 2px solid rgba(0, 255, 255, 0.2);
-            color: var(--text-light);
-            font-weight: 700;
-            transition: all 0.3s;
-            text-align: center;
+            background: rgba(0,255,255,0.05);
+            padding: 1.5rem; border-radius: 15px;
+            border: 2px solid rgba(0,255,255,0.2);
+            color: var(--text-light); font-weight: 700;
+            transition: all 0.3s; text-align: center;
         }
 
         .cert-box:hover {
-            background: rgba(0, 255, 255, 0.1);
-            border-color: var(--primary);
-            transform: scale(1.05);
+            background: rgba(0,255,255,0.1);
+            border-color: var(--primary); transform: scale(1.05);
         }
 
         footer {
             background: var(--bg-card);
             border-top: 2px solid var(--border);
-            padding: 3rem 2rem;
-            text-align: center;
-            position: relative;
-            z-index: 1;
+            padding: 3rem 2rem; text-align: center;
+            position: relative; z-index: 1;
         }
 
-        footer p {
-            color: var(--text-gray);
-            font-size: 1.05rem;
-            font-weight: 600;
-        }
+        footer p { color: var(--text-gray); font-size: 1.05rem; font-weight: 600; }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 3.5rem; }
@@ -582,14 +440,14 @@
 <body>
     <div class="animated-bg"></div>
 
+    <!-- ═══════════════ HERO ═══════════════ -->
     <section class="hero">
         <div class="hero-content">
             <div class="badge">🚀 AI ENGINEER & DATA SCIENTIST</div>
             <h1>Nisma Fatima</h1>
-            
             <p class="role">Data Scientist & AI and ML Engineer</p>
-            <p class="hero-subtitle">Machine Learning | Deep Learning | Generative AI | NLP | Object Detection | RAG | LLMs | Python | SQL | TensorFlow | Power BI  | Inferential Statistics</p>
-            
+            <p class="hero-subtitle">Machine Learning | Deep Learning | Generative AI | NLP | Object Detection | RAG | LLMs | Python | SQL | TensorFlow | Power BI | Inferential Statistics</p>
+
             <div class="stats-container">
                 <div class="stat-box">
                     <span class="stat-number">15+</span>
@@ -606,38 +464,39 @@
             </div>
 
             <div class="contact-grid">
-                <a href="mailto:nismafathima2001@gmail.com" class="contact-item">
-                    📧 nismafathima2001@gmail.com
-                </a>
-                <a href="tel:+918807717086" class="contact-item">
-                    📱 +91 8807717086
-                </a>
-                <a href="https://github.com/nismafathima" target="_blank" class="contact-item">
-                    💻 github.com/nismafathima
-                </a>
-                <span class="contact-item">
-                    📍 Tirunelveli, Tamil Nadu, India
-                </span>
+                <a href="mailto:nismafathima2001@gmail.com" class="contact-item">📧 nismafathima2001@gmail.com</a>
+                <a href="tel:+918807717086" class="contact-item">📱 +91 8807717086</a>
+                <a href="https://github.com/nismafathima" target="_blank" class="contact-item">💻 github.com/nismafathima</a>
+                <span class="contact-item">📍 Tirunelveli, Tamil Nadu, India</span>
             </div>
         </div>
     </section>
 
+    <!-- ═══════════════ ABOUT + SKILLS ═══════════════ -->
     <section class="section">
         <div class="section-header">
             <span class="section-tag">PROFESSIONAL OVERVIEW</span>
             <h2 class="section-title">About Me</h2>
         </div>
 
+        <!-- Summary -->
         <div class="summary-container">
             <h3 class="summary-title">Data Scientist & AI Engineer</h3>
             <p class="summary-text">
-                <span class="summary-highlight">Specializing in Machine Learning, Deep Learning, NLP, and Generative AI.</span> Experienced in building predictive models, multimodal  LLms AI systems, RAG Chat Bot, and agentic AI workflows. model optimization, and AI solutions for real-world problems.
+                <span class="summary-highlight">Specializing in Machine Learning, Deep Learning, NLP, and Generative AI.</span>
+                Experienced in building predictive models, multimodal LLM AI systems, RAG Chatbots, and agentic AI workflows.
+                Focused on model optimization and AI solutions for real-world problems.
             </p>
         </div>
 
+        <!-- Skills Heading -->
+        <h3 class="skills-section-heading">🛠️ Skills</h3>
+
+        <!-- Skills Grid -->
         <div class="skills-container">
+
             <div class="skill-box">
-                <h3 class="skill-title">🐍 Programming & Data Engineering</h3>
+                <h4 class="skill-title">🐍 Programming & Data Engineering</h4>
                 <div class="skill-items">
                     <span class="skill-tag">Python</span>
                     <span class="skill-tag">SQL</span>
@@ -650,7 +509,7 @@
             </div>
 
             <div class="skill-box">
-                <h3 class="skill-title">🤖 Machine Learning</h3>
+                <h4 class="skill-title">🤖 Machine Learning</h4>
                 <div class="skill-items">
                     <span class="skill-tag">scikit-learn</span>
                     <span class="skill-tag">Linear Regression</span>
@@ -666,7 +525,7 @@
             </div>
 
             <div class="skill-box">
-                <h3 class="skill-title">🧠 Deep Learning</h3>
+                <h4 class="skill-title">🧠 Deep Learning</h4>
                 <div class="skill-items">
                     <span class="skill-tag">TensorFlow</span>
                     <span class="skill-tag">Keras</span>
@@ -681,7 +540,7 @@
             </div>
 
             <div class="skill-box">
-                <h3 class="skill-title">🔬 Natural Language Processing</h3>
+                <h4 class="skill-title">🔬 Natural Language Processing</h4>
                 <div class="skill-items">
                     <span class="skill-tag">NLP</span>
                     <span class="skill-tag">Object Detection</span>
@@ -690,10 +549,11 @@
             </div>
 
             <div class="skill-box">
-                <h3 class="skill-title">✨ Generative AI</h3>
+                <h4 class="skill-title">✨ Generative AI</h4>
                 <div class="skill-items">
                     <span class="skill-tag">LLMs</span>
-                    <span class="skill-tag">Hugging Face,Transformers</span>
+                    <span class="skill-tag">Hugging Face</span>
+                    <span class="skill-tag">Transformers</span>
                     <span class="skill-tag">LangChain</span>
                     <span class="skill-tag">Multimodal AI</span>
                     <span class="skill-tag">RAG</span>
@@ -702,7 +562,7 @@
             </div>
 
             <div class="skill-box">
-                <h3 class="skill-title">📊 Data Visualization & Analytics</h3>
+                <h4 class="skill-title">📊 Data Visualization & Analytics</h4>
                 <div class="skill-items">
                     <span class="skill-tag">Excel (Advanced)</span>
                     <span class="skill-tag">Power BI</span>
@@ -715,7 +575,7 @@
             </div>
 
             <div class="skill-box">
-                <h3 class="skill-title">📈 Statistics</h3>
+                <h4 class="skill-title">📈 Statistics</h4>
                 <div class="skill-items">
                     <span class="skill-tag">Descriptive Statistics</span>
                     <span class="skill-tag">Inferential Statistics</span>
@@ -727,19 +587,25 @@
             </div>
 
             <div class="skill-box">
-                <h3 class="skill-title">Soft Skills</h3>
+                <h4 class="skill-title">🤝 Soft Skills</h4>
                 <div class="skill-items">
                     <span class="skill-tag">Analytical Thinking</span>
                     <span class="skill-tag">Problem Solving</span>
                     <span class="skill-tag">Attention to Detail</span>
                     <span class="skill-tag">Data-Driven Decision Making</span>
-                    <span class="skill-tag">Clear Communication of Insights</span>
+                    <span class="skill-tag">Clear Communication</span>
                     <span class="skill-tag">Time Management</span>
-                    <span class="skill-tag">Continuous Learning Mindset</span>
+                    <span class="skill-tag">Continuous Learning</span>
                 </div>
             </div>
-      </section>
 
+        </div>
+        <!-- END skills-container -->
+
+    </section>
+    <!-- END About section -->
+
+    <!-- ═══════════════ PROJECTS ═══════════════ -->
     <section class="section" id="projects">
         <div class="section-header">
             <span class="section-tag">PORTFOLIO</span>
@@ -747,10 +613,11 @@
             <p class="section-subtitle">Comprehensive showcase of AI, Machine Learning, Deep Learning, and Data Analytics expertise</p>
         </div>
 
-        <!-- Generative AI Projects -->
+        <!-- Generative AI -->
         <div class="category-wrapper">
             <h3 class="category-header">🌟 Generative AI Projects</h3>
             <div class="projects-grid">
+
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-label">Generative AI</span>
@@ -758,11 +625,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Built a multimodal AI system capable of understanding and generating responses using text, image, audio, and video inputs. Implemented efficient data preprocessing and LLM-based inference pipelines.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/multi-model-gen-ai-project/settings" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/multi-model-gen-ai-project" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
@@ -773,18 +636,19 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Designed a Retrieval-Augmented Generation system to provide accurate answers from documents. Optimized retrieval and embedding workflows for fast and relevant results.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/RAG-GEN-AI" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/RAG-GEN-AI" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
-        
-        <!-- Deep Learning Projects -->
+
+            </div>
+        </div>
+        <!-- END Generative AI -->
+
+        <!-- Deep Learning -->
         <div class="category-wrapper">
             <h3 class="category-header">🧠 Deep Learning Projects</h3>
             <div class="projects-grid">
+
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-label">Deep Learning</span>
@@ -792,11 +656,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Built a vision-language model integrating image and text understanding. Applied transfer learning, feature extraction, and visual question answering.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/visual-ask-ai-tf-project" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/visual-ask-ai-tf-project" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
@@ -807,11 +667,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Developed an LSTM-based model to predict traffic flow and congestion patterns. Applied sequence modeling and time series analysis for real-time forecasting.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/smart-traffic-DL-project" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/smart-traffic-DL-project" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
@@ -822,20 +678,19 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Built a deep learning classification model to predict churn and identify risk factors. Improved model performance using regularization and hyperparameter tuning.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/customer-churn-dl-project" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/customer-churn-dl-project" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
+
             </div>
         </div>
+        <!-- END Deep Learning -->
 
-        <!-- Machine Learning Projects -->
+        <!-- Machine Learning -->
         <div class="category-wrapper">
             <h3 class="category-header">🎯 Machine Learning Projects</h3>
             <div class="projects-grid">
+
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-label">Machine Learning</span>
@@ -843,11 +698,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Performed exploratory analysis and predictive modeling to identify key content drivers. Built models to forecast viewer engagement and content performance.</p>
-                        <div class="project-footer">
-                            <a href=" https://github.com/nismafathima/netflix-project" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/netflix-project" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
@@ -858,11 +709,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Developed regression and time series models for sales forecasting and demand planning. Applied feature engineering and model evaluation to improve accuracy.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/Walmart-project-" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/Walmart-project-" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
@@ -873,20 +720,19 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Analyzed global trends and performed predictive modeling for pandemic insights. Visualized patterns and interpreted results for decision support.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/machine-learning-covid-19-forcast-project/blob/main/COVID19_Analysis.ipynb" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/machine-learning-covid-19-forcast-project/blob/main/COVID19_Analysis.ipynb" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
+
             </div>
         </div>
+        <!-- END Machine Learning -->
 
-        <!-- SQL Projects -->
+        <!-- SQL -->
         <div class="category-wrapper">
             <h3 class="category-header">🗄️ SQL Projects</h3>
             <div class="projects-grid">
+
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-label">SQL & Databases</span>
@@ -894,11 +740,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Designed a relational database with optimized queries for hospital operations. Used joins, aggregations, and subqueries to support reporting and analytics.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/sql-hospital-project" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/sql-hospital-project" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
@@ -909,20 +751,19 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Built a complete library database with issue/return tracking and performance reporting. Implemented advanced SQL features like triggers and CTEs.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/sql-library-project" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/sql-library-project" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
+
             </div>
         </div>
+        <!-- END SQL -->
 
-        <!-- Excel Projects -->
+        <!-- Excel -->
         <div class="category-wrapper">
             <h3 class="category-header">📗 Excel Projects</h3>
             <div class="projects-grid">
+
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-label">Excel</span>
@@ -930,20 +771,19 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Built interactive dashboards using pivot tables, slicers, and KPIs to track sales performance and identify revenue drivers.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/sales-dashboard-project-excel" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/sales-dashboard-project-excel" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
+
             </div>
         </div>
+        <!-- END Excel -->
 
-        <!-- Power BI Projects -->
+        <!-- Power BI -->
         <div class="category-wrapper">
             <h3 class="category-header">📊 Power BI Projects</h3>
             <div class="projects-grid">
+
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-label">Power BI</span>
@@ -951,11 +791,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Created dynamic Power BI reports with drill-down, filtering, and trend analysis to monitor sales metrics.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/salaes-analysis-power-bi" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/salaes-analysis-power-bi" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
@@ -966,20 +802,19 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Designed healthcare analytics dashboards to visualize patient trends, risk factors, and outcomes.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/Heart-analysiss-power-bi-" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/Heart-analysiss-power-bi-" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
+
             </div>
         </div>
+        <!-- END Power BI -->
 
-         <!-- Statistical Projects -->
+        <!-- Statistics -->
         <div class="category-wrapper">
-            <h3 class="category-header">📊 Infrential Statistical Analysis Projects</h3>
+            <h3 class="category-header">📈 Inferential Statistical Analysis Projects</h3>
             <div class="projects-grid">
+
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-label">Inferential Statistics</span>
@@ -987,11 +822,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Conducted hypothesis testing and statistical inference for productivity factors with data-backed recommendations. Applied advanced statistical methods to derive actionable insights.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/infrenstial-statistics-project" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/infrenstial-statistics-project" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
@@ -1002,20 +833,18 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">Applied advanced statistical tests on real datasets and interpreted decision-making insights. Utilized Z-tests, T-tests, ANOVA, and Chi-square for comprehensive analysis.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/nismafathima/infrential-statistics-project" target="_blank" class="github-btn">
-                                💻 View on GitHub
-                            </a>
-                        </div>
+                        <a href="https://github.com/nismafathima/infrential-statistics-project" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
+
             </div>
         </div>
-    </section>
-               </div>
-           </div>
-    </section>
+        <!-- END Statistics -->
 
+    </section>
+    <!-- END Projects section -->
+
+    <!-- ═══════════════ EDUCATION ═══════════════ -->
     <section class="section">
         <div class="section-header">
             <span class="section-tag">EDUCATION & CERTIFICATIONS</span>
@@ -1024,10 +853,11 @@
         </div>
 
         <div class="education-grid">
+
             <div class="education-card">
                 <span class="edu-year">2026</span>
                 <h3 class="edu-title">Executive Post Graduate in Data Science & Artificial Intelligence</h3>
-                <p class="edu-inst">Conducted by IHUB Divyasampark IIT Roorkee in association with Intellipatt</p>
+                <p class="edu-inst">Conducted by IHUB Divyasampark IIT Roorkee in association with Intellipaat</p>
             </div>
 
             <div class="education-card">
@@ -1040,18 +870,20 @@
                 <span class="edu-year">Certifications</span>
                 <h3 class="edu-title">Professional Certifications</h3>
                 <div class="cert-grid">
-                    <div class="cert-box">✅ Executive Post Graduate in Data Science & Artificial Intelligence — Conducted by IHUB Divyasampark IIT Roorkee in association with Intellipat</div>
-                    <div class="cert-box">✅ Python Programming        — Intellipaat</div>
-                    <div class="cert-box">✅ SQL for Data Analytics    — Intellipaat</div>
-                    <div class="cert-box">✅ Excel for Data Analytics  — Intellipaat</div>
+                    <div class="cert-box">✅ Executive Post Graduate in Data Science & AI — IIT Roorkee / Intellipaat</div>
+                    <div class="cert-box">✅ Python Programming — Intellipaat</div>
+                    <div class="cert-box">✅ SQL for Data Analytics — Intellipaat</div>
+                    <div class="cert-box">✅ Excel for Data Analytics — Intellipaat</div>
                 </div>
             </div>
+
         </div>
     </section>
+    <!-- END Education section -->
 
     <footer>
         <p>&copy; 2026 Nisma Fatima | AI Engineer & Data Scientist | Building The Future With Artificial Intelligence</p>
     </footer>
-</body>
 
+</body>
 </html>
