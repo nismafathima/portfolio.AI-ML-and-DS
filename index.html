@@ -365,6 +365,28 @@
             line-height: 1.9; font-size: 1.05rem;
         }
 
+        .project-body ul.feature-list {
+            list-style: none;
+            color: var(--text-gray);
+            line-height: 1.9;
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            padding: 0;
+        }
+
+        .project-body ul.feature-list li {
+            padding-left: 1.3rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-body ul.feature-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
         .github-btn {
             display: flex; align-items: center; justify-content: center; gap: 0.7rem;
             padding: 1.2rem; text-align: center;
@@ -464,11 +486,11 @@
 
             <div class="stats-container">
                 <div class="stat-box">
-                    <span class="stat-number">20+</span>
+                    <span class="stat-number">10+</span>
                     <span class="stat-label">Projects</span>
                 </div>
                 <div class="stat-box">
-                    <span class="stat-number">25+</span>
+                    <span class="stat-number">15+</span>
                     <span class="stat-label">Tools Mastered</span>
                 </div>
                 <div class="stat-box">
@@ -519,6 +541,7 @@
                     <span class="skill-tag">SQL</span>
                     <span class="skill-tag">Git</span>
                     <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">Version Control</span>
                     <span class="skill-tag">NumPy</span>
                     <span class="skill-tag">Pandas</span>
                     <span class="skill-tag">Matplotlib</span>
@@ -561,11 +584,11 @@
             </div>
 
             <div class="skill-box">
-                <h4 class="skill-title">🔬 NLP & Vision</h4>
+                <h4 class="skill-title">🔬 NLP</h4>
                 <div class="skill-items">
                     <span class="skill-tag">NLP</span>
                     <span class="skill-tag">Tranformers</span>
-                    <span class="skill-tag">Visual Question Answering</span> 
+                    <span class="skill-tag">Hugging Face</span> 
                 </div>
             </div>
 
@@ -573,7 +596,6 @@
                 <h4 class="skill-title">✨ Generative AI</h4>
                 <div class="skill-items">
                     <span class="skill-tag">LLMs</span>
-                    <span class="skill-tag">Hugging Face</span>
                     <span class="skill-tag">LangChain</span>
                     <span class="skill-tag">RAG</span>
                     <span class="skill-tag">Prompt Engineering</span>
@@ -581,13 +603,14 @@
             </div>
 
             <div class="skill-box">
-                <h4 class="skill-title">⚙️ Deployment & MLOps</h4>
+                <h4 class="skill-title">⚙️ Deployment, Cloud & MLOps</h4>
                 <div class="skill-items">
-                    <span class="skill-tag">MLOps</span>
                     <span class="skill-tag">Streamlit</span>
                     <span class="skill-tag">FastAPI</span>
-                    <span class="skill-tag">Model Deployment</span>
-                    <span class="skill-tag">Model Monitoring</span>
+                    <span class="skill-tag">Microsoft Azure</span>
+                    <span class="skill-tag">Azure Resource Groups</span>
+                    <span class="skill-tag">Azure Machine Learning Workspace</span>
+                    <span class="skill-tag">Azure Deployment</span>
                 </div>
             </div>
 
@@ -642,13 +665,28 @@
         <div class="section-header">
             <span class="section-tag">PORTFOLIO</span>
             <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Comprehensive showcase of AI, Machine Learning, Deep Learning, MLOps, and Data Analytics expertise</p>
+            <p class="section-subtitle">Comprehensive showcase of AI, Machine Learning, MLOps, and Data Analytics expertise</p>
         </div>
 
         <!-- Featured AI Projects -->
         <div class="category-wrapper">
             <h3 class="category-header">⭐ Featured AI Projects</h3>
             <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-label">Generative AI</span>
+                        <h4 class="project-name">MultiPlex AI Console</h4>
+                        <p class="project-stack">FastAPI | Hugging Face </p>
+                    </div>
+                    <div class="project-body">
+                        <ul class="feature-list">
+                            <li>Built a production-hardened multi-modal GenAI app covering text-to-image, image-to-text, audio-to-text, text-to-audio, and video-to-text generation.</li>
+                            <li>Implemented concurrency-safe inference, API-key auth, and a dependency-free chat console UI, containerized with Docker for one-command deployment.</li>
+                        </ul>
+                        <a href="https://github.com/nismafathima/MultiPlex-AI-console" target="_blank" class="github-btn">💻 View on GitHub</a>
+                    </div>
+                </div>
 
                 <div class="project-card">
                     <div class="project-header">
@@ -671,18 +709,6 @@
                     <div class="project-body">
                         <p class="project-desc">Developed a multimodal system integrating X-ray classification, symptom analysis, and forecasting. Implemented a RAG-based diagnostic report generator with PDF export and GPT integration.</p>
                         <a href="https://github.com/nismafathima/Medical-diagnostic-AI" target="_blank" class="github-btn">💻 View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-label">Multimodal AI</span>
-                        <h4 class="project-name">OmniMind — Multimodal AI Assistant</h4>
-                        <p class="project-stack">BLIP | FAISS | RAG | Streamlit</p>
-                    </div>
-                    <div class="project-body">
-                        <p class="project-desc">Built a unified assistant processing text, voice, image, audio, and video inputs. Implemented visual question answering and document Q&A through a grounded RAG pipeline.</p>
-                        <a href="https://github.com/nismafathima/Omni-Mind--AI" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
@@ -726,48 +752,6 @@
         </div>
         <!-- END Featured AI Projects -->
 
-        <!-- Deep Learning -->
-        <div class="category-wrapper">
-            <h3 class="category-header">🧠 Deep Learning Projects</h3>
-            <div class="projects-grid">
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-label">Deep Learning</span>
-                        <h4 class="project-name">VisionAsk AI – Multimodal Vision-Language System</h4>
-                    </div>
-                    <div class="project-body">
-                        <p class="project-desc">Built a vision-language model integrating image and text understanding. Applied transfer learning, feature extraction, and visual question answering.</p>
-                        <a href="https://github.com/nismafathima/visual-ask-ai-tf-project" target="_blank" class="github-btn">💻 View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-label">Deep Learning</span>
-                        <h4 class="project-name">Smart Traffic Analyzer – LSTM Forecasting</h4>
-                    </div>
-                    <div class="project-body">
-                        <p class="project-desc">Developed an LSTM-based model to predict traffic flow and congestion patterns. Applied sequence modeling and time series analysis for real-time forecasting.</p>
-                        <a href="https://github.com/nismafathima/smart-traffic-DL-project" target="_blank" class="github-btn">💻 View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-label">Deep Learning</span>
-                        <h4 class="project-name">Customer Churn Prediction – Telecom Analytics</h4>
-                    </div>
-                    <div class="project-body">
-                        <p class="project-desc">Built a deep learning classification model to predict churn and identify risk factors. Improved model performance using regularization and hyperparameter tuning.</p>
-                        <a href="https://github.com/nismafathima/customer-churn-dl-project" target="_blank" class="github-btn">💻 View on GitHub</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!-- END Deep Learning -->
-
         <!-- Machine Learning -->
         <div class="category-wrapper">
             <h3 class="category-header">🎯 Machine Learning Projects</h3>
@@ -776,33 +760,45 @@
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-label">Machine Learning</span>
-                        <h4 class="project-name">Netflix Movies & TV Shows Analysis</h4>
+                        <h4 class="project-name">Netflix-Style Recommendation Engine</h4>
+                        <p class="project-stack">Python | Scikit-learn | Pandas</p>
                     </div>
                     <div class="project-body">
-                        <p class="project-desc">Performed exploratory analysis and predictive modeling to identify key content drivers. Built models to forecast viewer engagement and content performance.</p>
-                        <a href="https://github.com/nismafathima/netflix-project" target="_blank" class="github-btn">💻 View on GitHub</a>
+                        <ul class="feature-list">
+                            <li>Built a movie recommender using item-based collaborative filtering with cosine similarity on user-item ratings.</li>
+                            <li>Evaluated honestly against a baseline using MAE/RMSE, reporting the technique's real-world validity on genuine datasets.</li>
+                        </ul>
+                        <a href="https://github.com/nismafathima/Netflix--ML-project" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-label">Machine Learning</span>
-                        <h4 class="project-name">Walmart Sales Forecasting</h4>
+                        <h4 class="project-name">Walmart Data Analysis & Prediction</h4>
+                        <p class="project-stack">Python | Pandas | Scikit-learn</p>
                     </div>
                     <div class="project-body">
-                        <p class="project-desc">Developed regression and time series models for sales forecasting and demand planning. Applied feature engineering and model evaluation to improve accuracy.</p>
-                        <a href="https://github.com/nismafathima/Walmart-project-" target="_blank" class="github-btn">💻 View on GitHub</a>
+                        <ul class="feature-list">
+                            <li>Analyzed how unemployment, temperature, CPI, and holidays affect weekly sales across 45 Walmart stores.</li>
+                            <li>Built and compared Linear Regression and Random Forest models, achieving R² = 0.941 with the Random Forest.</li>
+                        </ul>
+                        <a href="https://github.com/nismafathima/Walmart-Project--Data-Analysis" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-label">Machine Learning</span>
-                        <h4 class="project-name">COVID-19 Trend Analysis & 7-Day Forecasting</h4>
+                        <h4 class="project-name">COVID-19 Trend Analysis Time series Forcasting</h4>
+                        <p class="project-stack">Python | Pandas | Prophet | Plotly</p>
                     </div>
                     <div class="project-body">
-                        <p class="project-desc">Analyzed global and India-specific pandemic trends across cases, deaths, and recovery. Built a seven-day forecasting model with confidence intervals using live auto-fetched data.</p>
-                        <a href="https://github.com/nismafathima/machine-learning-covid-19-forcast-project/blob/main/COVID19_Analysis.ipynb" target="_blank" class="github-btn">💻 View on GitHub</a>
+                        <ul class="feature-list">
+                            <li>Analyzed global and India-specific pandemic trends across cases, deaths, and recovery using live JHU CSSE data.</li>
+                            <li>Built a seven-day forecasting model with confidence intervals using Prophet, validated against historical fit.</li>
+                        </ul>
+                        <a href="https://github.com/nismafathima/Covid-19-Time-series-Forecasting" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
@@ -902,23 +898,30 @@
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-label">Inferential Statistics</span>
-                        <h4 class="project-name">Employee Performance Analysis</h4>
-                        <p class="project-stack">Python | SciPy | Matplotlib | Seaborn</p>
+                        <h4 class="project-name">Inferential Statistics — Employee Attrition</h4>
+                        <p class="project-stack">Python | SciPy | statsmodels</p>
                     </div>
                     <div class="project-body">
-                        <p class="project-desc">Applied Z-test, T-test, Chi-square, and ANOVA across a 300-employee performance dataset. Built statistical visualizations communicating training impact and promotion correlation results.</p>
-                        <a href="https://github.com/nismafathima/infrenstial-statistics-project" target="_blank" class="github-btn">💻 View on GitHub</a>
+                        <ul class="feature-list">
+                            <li>Conducted hypothesis testing (t-test, ANOVA, Chi-square) on 1,470-employee HR data, reporting effect sizes and test-assumption diagnostics.</li>
+                            <li>Built a multiple logistic regression model identifying overtime, tenure, and satisfaction as significant attrition predictors (pseudo R² = 0.171).</li>
+                        </ul>
+                        <a href="https://github.com/nismafathima/Inferential-statistics-on-employees-Attrition" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-label">Inferential Statistics</span>
-                        <h4 class="project-name">Inferential Statistics Analysis Project</h4>
+                        <h4 class="project-name">Inferential Statistics — Diabetes Risk Factors</h4>
+                        <p class="project-stack">Python | SciPy | statsmodels</p>
                     </div>
                     <div class="project-body">
-                        <p class="project-desc">Applied advanced statistical tests on real datasets and interpreted decision-making insights. Utilized Z-tests, T-tests, ANOVA, and Chi-square for comprehensive analysis.</p>
-                        <a href="https://github.com/nismafathima/infrential-statistics-project" target="_blank" class="github-btn">💻 View on GitHub</a>
+                        <ul class="feature-list">
+                            <li>Applied t-test, ANOVA, Chi-square, and logistic regression on 768-patient clinical data to identify diabetes risk factors.</li>
+                            <li>Validated model assumptions (VIF, Box-Tidwell, Cook's distance) and reported odds ratios with 95% confidence intervals (pseudo R² = 0.31).</li>
+                        </ul>
+                        <a href="https://github.com/nismafathima/Inferential-statistics-on-Diabetes-risk-factors" target="_blank" class="github-btn">💻 View on GitHub</a>
                     </div>
                 </div>
 
